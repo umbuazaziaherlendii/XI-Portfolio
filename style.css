@@ -1,0 +1,302 @@
+/* Reset dan Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar Custom */
+.navbar {
+    background: linear-gradient(90deg, #000000 0%, #001122 100%);
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #00FFFF;
+}
+
+.nav-link {
+    color: #FFFFFF !important;
+    margin: 0 10px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #00FFFF !important;
+    text-shadow: 0 0 5px #00FFFF;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Glow Effects (Arcade Modern) */
+.glow-img,
+.glow-text,
+.glow-btn,
+.glow-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.glow-img:hover,
+.glow-card:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.glow-btn {
+    border: 2px solid #00FFFF;
+    color: #00FFFF;
+    background: transparent;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.glow-btn:hover {
+    background: #00FFFF;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Headings */
+h1, h2, h3, h5 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1, h2 {
+    color: #00FFFF;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Cards */
+.card {
+    background: linear-gradient(145deg, #1a1a1a 0%, #0d1117 100%);
+    border: 1px solid #00FFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Form Styling */
+.form-control {
+    background: #1a1a1a !important;
+    border: 1px solid #00FFFF !important;
+    color: #FFFFFF !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
+    border-color: #00FFFF !important;
+}
+
+.form-label {
+    color: #00FFFF;
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+.bg-dark {
+    background: linear-gradient(135deg, #000000 0%, #001122 100%);
+}
+
+/* Quick Stats */
+.glow-text {
+    color: #00FFFF;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00FFFF;
+}
+
+/* Animasi Fade-In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .glow-img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+}
+
+/* Footer (jika ditambahkan nanti) */
+footer {
+    background: #000000;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #00FFFF;
+}
+
+
+/* Sub-Section Headers untuk Portfolio */
+.cert-header {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.cert-header::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00FFFF, transparent);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Spacing untuk Certificates Section */
+.portfolio-section .row.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.certificates-row {
+    /* Jika ingin class khusus, tapi reuse row biasa sudah cukup */
+}
+
+/* Tambahan: Icon atau badge untuk certificates (opsional, bisa tambah di HTML jika mau) */
+.cert-badge {
+    background: rgba(0, 255, 255, 0.2);
+    border: 1px solid #00FFFF;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #00FFFF;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+/* Footer Styling */
+footer {
+    background: linear-gradient(180deg, #000000 0%, #001122 100%);
+    border-top: 1px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 0 -2px 10px rgba(0, 255, 255, 0.1);
+}
+
+footer h5, footer h6 {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Social Icons */
+.social-icons {
+    gap: 1rem;
+}
+
+.social-link {
+    color: #00FFFF;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    background: rgba(0, 255, 255, 0.1);
+}
+
+.social-link:hover {
+    color: #000000 !important;
+    background: #00FFFF;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 25px rgba(0, 255, 255, 0.4);
+    transform: scale(1.2) rotate(5deg); /* Efek arcade: sedikit rotate untuk dinamis */
+    text-shadow: none;
+}
+
+.glow-social {
+    /* Reuse glow class untuk konsistensi */
+}
+
+/* Responsif untuk Footer */
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center !important;
+        gap: 0.5rem;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-link i {
+        font-size: 1.2rem;
+    }
+    
+    footer .row > div {
+        text-align: center !important;
+    }
+}
